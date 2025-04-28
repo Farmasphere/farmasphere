@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Farmasphere</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'signupLogin/login.css' %}">
+</head>
+<body>
+
+    <div class="container">
+        <h3>Login to Farmasphere</h3><form onsubmit="handleLogin(event)">
+            <label for="username">Username</label>
+            <input type="text" placeholder="Enter Username" id="username" required>
+        
+            <label for="password">Password</label>
+            <input type="password" placeholder="Enter Password" id="password" required>
+        
+            <label for="role">Login as</label>
+            <select id="role" required>
+                <option value="farmer">Farmer</option>
+                <option value="admin">Admin</option>
+            </select>
+        
+            <button type="submit">Log In</button>
+            <a href="./signup.html">Create an account</a>
+        </form>
+
+    </div>
+    <script>
+        function handleLogin(event) {
+            event.preventDefault();
+            const role = document.getElementById('role').value;
+            localStorage.setItem('userRole', role);
+            if (role === 'farmer') {
+                window.location.href = './farmer-dashboard.html';
+            } else {
+                window.location.href = './admin-dashboard.html';
+            }
+        }
+    </script>
+</body>
+</html>

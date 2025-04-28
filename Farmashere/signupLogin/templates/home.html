@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Farming Portal - Home</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px 0;
+        }
+        h1 {
+            margin: 0;
+        }
+        .nav-container {
+            margin: 30px 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .nav-card {
+            background-color: white;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            width: 200px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: 0.3s ease;
+        }
+        .nav-card:hover {
+            transform: scale(1.05);
+            cursor: pointer;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🌱 Welcome to Smart Farming Portal</h1>
+        <p>Your one-stop solution for smart agriculture</p>
+    </header>
+
+    <div class="nav-container">
+        <a href="farmer-dashboard.html">
+            <div class="nav-card">
+                <h3>Farmer Dashboard</h3>
+                <p>Personalized info for your crops & weather</p>
+            </div>
+        </a>
+        <a href="weather.html">
+            <div class="nav-card">
+                <h3>Weather Info</h3>
+                <p>Get live weather updates</p>
+            </div>
+        </a>
+        <a href="advice.html">
+            <div class="nav-card">
+                <h3>Crop Advice</h3>
+                <p>Tips based on season & soil</p>
+            </div>
+        </a>
+        <a href="login.html">
+            <div class="nav-card">
+                <h3>Login</h3>
+                <p>Access your account</p>
+            </div>
+        </a>
+    </div>
+</body>
+</html>
