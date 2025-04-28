@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -53,13 +54,13 @@
     </header>
 
     <div class="nav-container">
-        <a href="farmer-dashboard.html">
+        <a href="{% url 'farmer' %}">
             <div class="nav-card">
                 <h3>Farmer Dashboard</h3>
                 <p>Personalized info for your crops & weather</p>
             </div>
         </a>
-        <a href="weather.html">
+        <a href="{% url 'weather'%}">
             <div class="nav-card">
                 <h3>Weather Info</h3>
                 <p>Get live weather updates</p>
@@ -71,7 +72,7 @@
                 <p>Tips based on season & soil</p>
             </div>
         </a>
-        <a href="login.html">
+        <a href="{%url 'login'%}">
             <div class="nav-card">
                 <h3>Login</h3>
                 <p>Access your account</p>

@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -57,19 +58,19 @@
   <div class="container">
     <h2>Quick Access</h2>
     <div class="card-grid">
-      <div class="card" onclick="location.href='user-management.html'">
+      <div class="card" onclick="location.href='#'">
         <h3>👥 Users</h3>
         <p>Manage farmers, admins and profiles</p>
       </div>
-      <div class="card" onclick="location.href='crop-management.html'">
+      <div class="card" onclick="location.href='#'">
         <h3>🌾 Crops</h3>
         <p>Update crop database & recommendations</p>
       </div>
-      <div class="card" onclick="location.href='feedback.html'">
+      <div class="card" onclick="location.href='#'">
         <h3>💬 Feedback</h3>
         <p>Review user feedback and concerns</p>
       </div>
-      <div class="card" onclick="location.href='analytics.html'">
+      <div class="card" onclick="location.href='#'">
         <h3>📊 Analytics</h3>
         <p>Track system usage and reports</p>
       </div>
@@ -81,7 +82,7 @@
     const role = localStorage.getItem('userRole');
     if (role !== 'admin') {
       alert("Access Denied. Admins only.");
-      window.location.href = './login.html';
+      window.location.href = "{% url 'login' %}";
     }
   </script>
 

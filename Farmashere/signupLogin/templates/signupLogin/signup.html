@@ -98,7 +98,7 @@
     <div class="container">
         <h3>Sign Up for Farmasphere</h3>
         <form method="post">
-            
+            {% csrf_token %}
             <label for="username">Username</label>
             <input type="text" placeholder="Enter Username" id="username" name="username" required>
 
@@ -113,7 +113,7 @@
 
             <button type="submit">Sign Up</button>
 
-            <a href="./login.html">Already have an account? Log In</a>
+            <a href="{% url 'login' %}">Already have an account? Log In</a>
 
         </form>
     </div>

@@ -27,7 +27,7 @@
             </select>
         
             <button type="submit">Log In</button>
-            <a href="./signup.html">Create an account</a>
+            <a href="{% url 'register' %}">Create an account</a>
         </form>
 
     </div>
@@ -37,9 +37,9 @@
             const role = document.getElementById('role').value;
             localStorage.setItem('userRole', role);
             if (role === 'farmer') {
-                window.location.href = './farmer-dashboard.html';
+                window.location.href = "{% url 'farmer'%}";
             } else {
-                window.location.href = './admin-dashboard.html';
+                window.location.href = "{% url 'administrator'%}";
             }
         }
     </script>

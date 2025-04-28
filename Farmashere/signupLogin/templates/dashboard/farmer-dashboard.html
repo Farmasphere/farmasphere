@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -70,7 +71,7 @@
         // Check if user is logged in
         if (!localStorage.getItem('userRole')) {
             alert("Please log in first");
-            window.location.href = './login.html';
+            window.location.href = "{% url 'login' %}";
         }
     </script>
 
@@ -80,10 +81,10 @@
     <!-- Navigation -->
     <nav class="nav">
         <ul class="navbar">
-            <li><a href="home.html" class="btn">Home</a></li>
-            <li><a href="#" class="btn">Weather</a></li>
+            <li><a href="{% url 'home' %}" class="btn">Home</a></li>
+            <li><a href="{% url 'weather' %}" class="btn">Weather</a></li>
             <li><a href="#" class="btn">Crop Advice</a></li>
-            <li><a href="profile.html" class="btn">Profile</a></li>
+            <li><a href="{% url 'profile'%}" class="btn">Profile</a></li>
         </ul>
     </nav>
 
@@ -105,7 +106,7 @@
         // Function to fetch weather data
         function getWeather() {
             // Example API call (replace with a real one like OpenWeatherMap API)
-            const weatherData = "Sunny, 25°C"; // Replace with real API data
+            const weatherData = "Sunny, 35°C"; // Replace with real API data
             document.getElementById("weatherData").textContent = weatherData;
         }
 
